@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriately as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>WorldWeaver: Generating Long-Horizon Video Worlds via Rich Perception</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title" style="font-size: 40px; line-height: 1.2;">WorldWeaver: Generating Long-Horizon Video Worlds via Rich Perception</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://johanan528.github.io/">Zhiheng Liu</a><sup>1,2</sup>,</span>
+              <span class="author-block">
+                <a href="https://sites.google.com/view/xueqingdeng7/home/">Xueqing Deng</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.shoufachen.com/">Shoufa Chen</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://angtianwang.github.io/">Angtian Wang</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://guoqiushan.github.io/">Qiushan Guo</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://mingfei.info/">Mingfei Han</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://xuezeyue.github.io/">Zeyue Xue</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://chenmnz.github.io/">Mengzhao Chen</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://luoping.me/">Ping Luo</a><sup>1†</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://sites.google.com/site/linjieyang89/">Linjie Yang</a><sup>2†</sup>
+              </span>
+            </div>
+      
+      
+        <div class="is-size-5 publication-authors">
+          <span class="author-block"><sup>1</sup>The University of Hong Kong</span>&ensp;
+          <span class="author-block"><sup>2</sup>ByteDance Seed</span>&ensp;
+            </div>
+            <!-- <div class="is-size-5 publication-authors"> -->
+          
+  
+            </div>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="http://arxiv.org/abs/2404.11613"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/ali-vilab/infusion"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Video Link. -->
+              
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Generative video modeling has made significant strides, yet ensuring structural and temporal consistency over long sequences remains a challenge. Current methods predominantly rely on RGB signals, leading to accumulated errors in object structure and motion over extended durations. To address these issues, we introduce WorldWeaver, a robust framework for long video generation that jointly models RGB frames and perceptual conditions within a unified long-horizon modeling scheme. Our training framework offers three key advantages. First, by jointly predicting perceptual conditions and color information from a unified representation, it significantly enhances temporal consistency and motion dynamics. Second, by leveraging depth cues, which we observe to be more resistant to drift than RGB, we construct a memory bank that preserves clearer contextual information, improving quality in long-horizon video generation. Third, we employ segmented noise scheduling for training prediction groups, which further mitigates drift and reduces computational cost. Extensive experiments on both diffusion- and rectified flow-based models demonstrate the effectiveness of WorldWeaver in reducing temporal drift and improving the fidelity of generated videos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Core Contributions</h2>
+          <div class="content has-text-justified">
+            <ul>
+              <li>Systematically exploring the role of image-based perceptual condition, such as depth and optical flow, in enhancing long-horizon video generation as auxiliary signals.</li>
+              <li>Proposing a unified framework that integrates perceptual conditioning and memory mechanisms for robust long-horizon video prediction.</li>
+              <li>Extensive validation across different generative models and datasets, including both general-purpose and robotic manipulation domains, highlighting the potential of our approach as a foundation for scalable world models.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Method Section -->
+<section class="section hero is-light is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+
+        <!-- Method Figure -->
+        <figure class="image">
+          <img src="./video/method.png" alt="Method Diagram" style="max-width: 100%; height: auto;">
+        </figure>
+
+        <!-- Method Description -->
+        <div class="content has-text-justified" style="margin-top: 1rem;">
+          <p>
+            Given an input video, RGB, depth, and optical flow signals are encoded into a joint latent representation via a 3D VAE. 
+            The latents are split into a memory bank and prediction groups for the Diffusion Transformer. 
+            The memory bank stores historical frames and is excluded from loss computation; short-term memory retains a few fully denoised frames for fine details, 
+            while long-term memory keeps depth cues noise-free and adds low-level noise to RGB information. 
+            During training, prediction groups are assigned different noise levels according to the noise scheduler curve, 
+            aligned with the noise scheduling used during inference.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Paper Results -->
+  <section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            Below, we present qualitative results generated by our method, including human activity scenes and robotic arm manipulation tasks.
+          </p>
+        </div>
+
+        <style>
+          .video-pair {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* 原来是 20px，现在加大到 30px */
+}
+          .video-item {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px; /* 增加每个视频底部空隙 */
+}
+          .prompt-text {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    min-height: 4.2em;           /* 3 行的高度：1.4 * 3 = 4.2em */
+    display: -webkit-box;        /* 固定显示为 3 行，超出隐藏 */
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: center;
+  }
+          video {
+            width: 90%;
+            height: auto;
+          }
+        </style>
+
+        <!-- Row 1: Robotic Arm Tasks -->
+        <div class="video-pair">
+          <div class="video-item">
+            <div class="prompt-text">
+              Prompt: A robot arm picks up a blue cup from the sink area and places it on a tray, then picks up an orange cup places it on a tray, then picks up the green one places it on a tray.
+            </div>
+            <video controls>
+              <source src="./video/3.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-item">
+            <div class="prompt-text">
+              Prompt: The robotic arm moves downward, approaching drawer and open it, then the robotic arm moves up, then the robotic arm approaches the green can, picks it up and puts it in the drawer, finally it approaches the black bowl, grips and puts it in the drawer.
+            </div>
+            <video controls>
+              <source src="./video/2.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <!-- Row 2: Couple & Girl -->
+        <div class="video-pair">
+  <div class="video-item">
+    <div class="prompt-text">
+      Prompt: A young man jogs around a peaceful lake at dawn, he stops to catch his breath and stretch, he takes a photo of the sunrise, then continues running with determination.
+    </div>
+    <video controls>
+      <source src="./video/9.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="video-item">
+    <div class="prompt-text">
+      Prompt: A young woman types on her laptop in a coffee shop, she takes a sip and checks her schedule, receives a message and smiles, then closes her computer to leave.
+    </div>
+    <video controls>
+      <source src="./video/5.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<!-- Row 3: Little Girl & Couple -->
+<div class="video-pair">
+  <div class="video-item">
+    <div class="prompt-text">
+      Prompt: A little girl sits by the window on a rainy day, she draws shapes on the foggy glass, her mother brings her hot chocolate, together she watches the rain.
+    </div>
+    <video controls>
+      <source src="./video/1.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="video-item">
+    <div class="prompt-text">
+      Prompt: An elderly couple walks hand in hand in the park. They chat and smile as they stroll. The man feeds the woman a small treat. The camera zooms in on their happy laughter.
+    </div>
+    <video controls>
+      <source src="./video/4.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{liu2024infusion,
+  title={InFusion: Inpainting 3D Gaussians via Learning Depth Completion from Diffusion Prior},
+  author={Liu, Zhiheng and Ouyang, Hao and Wang, Qiuyu and Cheng, Ka Leong and Xiao, Jie and Zhu, Kai and Xue, Nan and Liu, Yu and Shen, Yujun and Cao, Yang},
+  journal={arXiv preprint arXiv:2404.11613},
+  year={2024}
+}</code></pre>
+  </div>
+</section>
+  <!-- End Paper Results -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+              <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
